@@ -1,0 +1,44 @@
+{
+  "name": "babel-plugin-tsc",
+  "version": "0.1.0",
+  "description": "A babel plugin to transform TypeScript with tsc",
+  "main": "dist/babel-plugin-tsc.cjs.js",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.6.2",
+    "@babel/plugin-transform-runtime": "^7.6.2",
+    "@types/babel__core": "^7.1.3",
+    "@types/fs-extra": "^8.0.0",
+    "@types/jest": "^24.0.18",
+    "jest": "^24.9.0",
+    "jest-in-case": "^1.0.2",
+    "preconstruct": "^0.1.3",
+    "typescript": "^3.6.3"
+  },
+  "scripts": {
+    "test": "preconstruct dev && jest",
+    "prepublishOnly": "preconstruct build"
+  },
+  "peerDependencies": {
+    "typescript": "*"
+  },
+  "dependencies": {
+    "@babel/preset-env": "^7.6.2",
+    "@babel/preset-typescript": "^7.6.0",
+    "babel-jest": "^24.9.0",
+    "fs-extra": "^8.1.0",
+    "ts-morph": "^4.1.1"
+  },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/test-copy/"
+    ],
+    "modulePathIgnorePatterns": [
+      "<rootDir>/test-copy/"
+    ]
+  }
+}
